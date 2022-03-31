@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="assets/css/style1.css" />
+  </head>
+  <div>
+    <header id="header">
+      <a href="index.html">
+          <h2 ID="logo">Rewilding Belgravia</h2>
+      </a>
+      <div>
+        <a><img ID src="images\logo-image.webp" alt="Rewilding Belgravia-logo" width="100" height="100">
+        </a>
+      </div>
+      <nav>
+          <ul id="menu">
+              <li>
+              <a class="active" href="signup.html">Sign Up</a>
+              </li>
+              <li>
+              <a class="active" href="blog.html">Blog</a>
+              </li>
+              <li>
+              <a class="active" href="news.html">News</a>
+              </li>
+              <li>
+              <a class="active" href="gallery.html">Gallery</a>
+              </li>
+              <li>
+              <a href="index.html">Home</a>
+              </li>
+          </ul>
+      </nav>
+  </header>
+  <section>
+    <div class="row"id="header">
+      <div style="padding: 20px; background-color: white;">
+          <img class="card-img bg-transparent" src="images\winterscene.png" width="100%">
+      </div>
+    </div>
+    <hr>
+  </section>
+
+  <div class="container">
+      <form id="contact">
+        <h3>Contact Form</h3>
+        <h4><i class="fas fa-heartbeat"></i> Let's get you signed up!</h4>
+        <fieldset>
+          <input
+            placeholder="Your name"
+            type="text"
+            tabindex="1"
+            required
+            autofocus
+            class="username"/>
+        </fieldset>
+        <fieldset>
+          <input
+            placeholder="Your Email Address"
+            type="email"
+            tabindex="2"
+            required
+            class="email"/>
+        </fieldset>
+        <fieldset>
+          <textarea
+            placeholder="Type your message here...."
+            tabindex="5"
+            required
+            class="message"
+          ></textarea>
+        </fieldset>
+        <fieldset>
+          <button
+            name="submit"
+            type="submit"
+            id="contact-submit"
+            data-submit="...Sending"
+            class="submit">
+            Submit
+          </button>
+        </fieldset>
+        <div class="layout shade float-end mb-1"  id="center-about">
+          <form id="contact" class="signup-form">
+            <h2 class="layout shade float-end mb-1"  id="center-about">
+            <i class="fas fa-heartbeat"></i> Get in touch!</h2>
+            <div class="emailer">
+              <h5>Want to know more about Rewilding Belgravia</h5>
+              <h5>Prefer to send us an email:</h5>
+              <h5 id="email-header">Email us</h5>
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:hello@rewildingbelgravialondon.com">hello [@] rewildingbelgravialondon.com
+              </a>
+            </div>
+            <div class="container><div class="small text-center text-muted"><i class="fas fa-stop"></i>Disclaimer - We will not share your details with anyone else.</div></div>
+          </div>
+      </form>
+    </div>
+
+
+    <!-- loader -->
+    <div class="loader">
+      <img
+        src="https://media.giphy.com/media/MEiZ5h8lOkM7rwideE/giphy.gif"
+        alt=""/>
+    </div>
+
+
+  <section>
+    <hr>
+    <div class="row">
+      <div style="padding: 20px;">
+          <img class="card-img bg-transparent" src="images\winterscene.png" width="100%">
+      </div>
+    </div>
+    <hr>
+    
+   <footer class="container px-4 px-lg-5">                                                                                    <footer class="py-5 layout shade shade--top shade--bottom downloads">
+     <div class="col text-center mt-3">
+       <p><a href="#">Back to top</a></p>
+       <p class="text-align-center" style="line-height: 16px;"><span style="color: #242121; display: unset;">&nbsp;</span><span class="span" style="color: rgb(29, 23, 23); display: unset; font-style: italic; font-weight: 700;"><span style="color: #352d2d; display: unset; font-style: italic; font-weight: 700;">All Rights Reserved. Copyright @ 2022 -</span> 
+       </span><span class="span" style="color: hsl(0, 5%, 17%); display: unset; font-style: italic; font-weight: bold;"><span style="color: rgb(29, 23, 23); display: unset; font-style: italic; font-weight: bold;">Powered by</span> 
+        <a target="_blank" href="http://www.kukmarketing.com" data-toggle="tooltip" title="hover" runtime_url="http://www.kukmarketing.com" type="url" style="display: unset; font-style: italic; font-weight: bold;  color: #352d2d;">KUK</a>
+       </span></p>  
+     </div>
+  </footer>
+    
+  </section>
+                                                                                                                                               
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+   <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+   <script type="text/javascript">
+
+     /**  User ID user_OxfJZYwpeVsS9XIdsUY0r
+          Access Token e971b6cd07f15c120b57c46424692ede */
+
+      (function () {
+        // emailjs.init("USERID");
+        emailjs.init("user_OxfJZYwpeVsS9XIdsUY0r");
+      })();
+
+      /**
+        emailjs.send("SERVICE ID", "TEMPLATE NAME", {
+          to_name: "USERNAME",
+          from_name: "FROM NAME",
+          message: "MESSAGE",
+        });
+       **/
+
+      function validate() {
+        let loader = document.querySelector(".loader");
+        let name = document.querySelector(".username");
+      //let fName = document.querySelector(".from_fName");//
+      //let lName = document.querySelector(".from_lName");//
+        let email = document.querySelector(".email");
+        let msg = document.querySelector(".message");
+        let btn = document.querySelector(".submit");
+
+        btn.addEventListener("click", (e) => {
+          e.preventDefault();
+          if (name.value == "" || email.value == "" || msg.value == "") {
+            emptyerror();
+          } else {
+            setTimeout(function(){
+               location.reload();
+            }, 3000);
+            sendmail(name.value, email.value, msg.value);
+            success();
+            loader.style.display = "none";
+          }
+        });
+      }
+      validate();
+
+      function sendmail(name, email, msg) {
+        emailjs.send("service_g3a7qft","template_hqotm5r",{
+          to_name: "Rewidling London website",
+          from_name: name,
+          from_email: email,
+          message: msg,
+        });
+      }
+
+      function emptyerror() {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Fields cannot be empty!",
+        });
+      }
+
+      function error() {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Something went wrong!",
+        });
+      }
+
+      function success() {
+        Swal.fire({
+          icon: "success",
+          title: "Success...",
+          text: "Successfully sent message",
+        });
+      }
+    </script>
+    <!-- Font awesome script -->
+    <script src="https://kit.fontawesome.com/1e03de6694.js" crossorigin="anonymous"></script>
+  </body>
+</html>
