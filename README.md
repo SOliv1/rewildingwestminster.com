@@ -6,9 +6,9 @@
 [![pages-build-deployment](https://github.com/SOliv1/rewilding-belgravia-london/actions/workflows/pages/pages-build-deployment/badge.svg?branch=master-new)](https://github.com/SOliv1/rewilding-belgravia-london/actions/workflows/pages/pages-build-deployment)
 [![Node.js CI](https://github.com/SOliv1/rewilding-london/actions/workflows/node.js.yml/badge.svg?branch=master&event=schedule)](https://github.com/SOliv1/rewilding-london/actions/workflows/node.js.yml)
 
-### Link to site can be viewed here
+### Link to site can be viewed here on 
 
-  https://soliv1.github.io/rewilding-westminster-london/
+  [Netlify](https://master--rewildingwestminster.netlify.app/)
 
 This project template has been rebuilt following the **Code Institute Solutions
 templates by A. Greaves**
